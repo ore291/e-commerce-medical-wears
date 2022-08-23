@@ -1,7 +1,7 @@
 import React from "react";
 import Categories from "../components/Categories";
-import Footer from "../components/NewFooter";
-import Navbar from "../components/NewNav";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import Shop from "../components/Shop";
 import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
@@ -22,7 +22,7 @@ const IntroText = styled.p`
 const Home = () => {
   return (
     <div>
-    
+      <Navbar />
       <Slider />
       <IntroText>
         The Leading Brand for Medical Coats and Scrub Suits in Manila. Made with the Utmost Comfort & Style for Our Modern Day Heroes.
@@ -31,7 +31,7 @@ const Home = () => {
       <Categories />
       <Products/>
       <Newsletter/>
-     
+      <Footer/>
     </div>
   );
 };
