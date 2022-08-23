@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector, useDispatch } from "react-redux";
+import MenuButton from "../assets/png/icons/menu_black.png"
 
 const MenuItem2 = styled.div`
   font-size: 14px;
@@ -57,7 +58,7 @@ const NewNav = () => {
           <img
             id="topnav--sm__button__img"
             className="c-topnav--sm__button--open"
-            src="png/icons/menu_black.png"
+            src={MenuButton}
             style={{ width: 25, height: 25 }}
             alt="menu"
           />
@@ -68,9 +69,9 @@ const NewNav = () => {
         <div className="collapse navbar-collapse" id="topnav--sm__collapsible">
           <div className="d-flex justify-content-between text-center mt-3 mb-4">
             <div className="c-topnav--sm__imgblk-div">
-              <a href="shop2adf.html?scroll=scrubtopHeader">
+              <a href="#">
                 <img
-                  src="images/burger/menu_scrubs_2.jpg"
+                  src="/images/burger/menu_scrubs_2.jpg"
                   alt=">MoveTech Scrubsuit"
                   className="c-topnav--sm__imgblk__img"
                 />
@@ -78,9 +79,9 @@ const NewNav = () => {
               </a>
             </div>
             <div className="c-topnav--sm__imgblk-div">
-              <a href="shopd054.html?scroll=longSleevesBlazerHeader">
+              <a href="#">
                 <img
-                  src="images/burger/menu_blazer.jpg"
+                  src="/images/burger/menu_blazer.jpg"
                   alt="Long Sleeves Blazer"
                   className="c-topnav--sm__imgblk__img"
                 />
@@ -92,9 +93,9 @@ const NewNav = () => {
               </a>
             </div>
             <div className="c-topnav--sm__imgblk-div">
-              <a href="shop3e30.html?scroll=longCoatHeader">
+              <a href="#">
                 <img
-                  src="images/burger/menu_longcoat.jpg"
+                  src="/images/burger/menu_longcoat.jpg"
                   alt="Long Coat"
                   className="c-topnav--sm__imgblk__img"
                 />
