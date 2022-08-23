@@ -1,63 +1,79 @@
-import {Container, Label, RadioLabel, Submit, Input, Radio} from "./auth.styled";
-import Navbar from "../components/NewNav";
-import Footer from "../components/NewFooter";
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
+const Wrapper = styled.div`
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+  ${mobile({ width: "75%" })}
+`;
 
+const Title = styled.h1`
+  font-size: 24px;
+  font-weight: 300;
+`;
 
+const Form = styled.form`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Input = styled.input`
+  flex: 1;
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+`;
+
+const Agreement = styled.span`
+  font-size: 12px;
+  margin: 20px 0px;
+`;
+
+const Button = styled.button`
+  width: 40%;
+  border: none;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+`;
 
 const Register = () => {
   return (
-    <>
-     
-      <Container>
-        <div>
-          <div className="header-spacer" />
-          <div className="container">
-            <h1 className="text-center page-header ">Register</h1>
-            <div className="container mt-4 user__register-container ">
-              <form method="post" action="#">
-                <Label className="mt-2 mb-0 ">First Name</Label>
-                <Input type="text" name="firstName" defaultValue />
-                <Label className="mt-2 mb-0 ">Last Name</Label>
-                <Input type="text" name="lastName" defaultValue />
-                <Label className="mt-2 mb-2 ">Gender</Label>
-                <Radio type="radio" name="gender" defaultValue="male" />
-                <RadioLabel htmlFor="male">Male</RadioLabel>
-                <br />
-                <Radio type="radio" name="gender" defaultValue="female" />
-                <RadioLabel htmlFor="female">Female</RadioLabel>
-                <br />
-                <Label className="mt-2 mb-0 ">Your Email</Label>
-                <Input type="text" name="email" />
-                <Label className="mt-2 mb-0 ">
-                  Your Password (Minimum 8 characters)
-                </Label>
-                <Input type="password" name="password" />
-                <Label className="mt-2 mb-0 ">Confirm Password</Label>
-                <Input type="password" name="password_confirmation" />
-                <Label className="mb-0 ">Mobile Number (Required)</Label>
-                <Input type="text" name="mobile" />
-                <div className="float-end">
-                  <Submit
-                    type="submit"
-                    defaultValue="Register"
-                  />
-                </div>
-                <div style={{ clear: "both" }} />
-              </form>
-              <div className="mt-3">
-                <a href="/login" className="generic-link">
-                  Already have an account? Log in here.
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-   
-    </>
-   
+    <Container>
+      <Wrapper>
+        <Title>CREATE AN ACCOUNT</Title>
+        <Form>
+          <Input placeholder="name" />
+          <Input placeholder="last name" />
+          <Input placeholder="username" />
+          <Input placeholder="email" />
+          <Input placeholder="password" />
+          <Input placeholder="confirm password" />
+          <Agreement>
+            By creating an account, I consent to the processing of my personal
+            data in accordance with the <b>PRIVACY POLICY</b>
+          </Agreement>
+          <Button>CREATE</Button>
+        </Form>
+      </Wrapper>
+    </Container>
   );
 };
 
