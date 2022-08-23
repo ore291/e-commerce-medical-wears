@@ -2,8 +2,8 @@ import { Add, Remove } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/NewFooter";
+import Navbar from "../components/NewNav";
 import { mobile } from "../responsive";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
@@ -184,7 +184,7 @@ const Cart = () => {
   }, [cart, stripeToken, cart.total, history]);
   return (
     <Container>
-      <Navbar />
+     
       <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
@@ -262,7 +262,7 @@ const Cart = () => {
           </Summary>
         </Bottom>
       </Wrapper>
-      <Footer />
+  
     </Container>
   );
 };
